@@ -11,7 +11,6 @@
   "author": "Philipp Melnikov",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
     "express": "^4.15.2",
     "mongoose": "^5.0.4",
     "namor": "^1.0.1",
