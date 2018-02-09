@@ -2,15 +2,11 @@ const app = require('express')();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const mongoose = require('mongoose');
-const bodyParser = require("body-parser");
 const messageService = require('./services/MessageService');
 const userService = require('./services/UserService');
 mongoose.connect('mongodb://localhost:27017/chat_app');
-
+const port = process.env.PORT || 3000;
 const users = [];
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 /**
  * homepage
@@ -90,6 +86,6 @@ io.on('connection', function (socket) {
     });
 });
 
-http.listen(3000, function () {
+http.listen(port, function () {
     console.log('listening on *:3000');
 });
