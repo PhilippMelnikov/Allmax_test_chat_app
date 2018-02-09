@@ -54,7 +54,7 @@ io.on('connection', function (socket) {
         throw err;
     });
 
-    // chat message
+    // send message
     socket.on('send message', function (msg) {
         const user = users.map((client) => {
             if (client.IP === socket.handshake.address) {
@@ -72,6 +72,7 @@ io.on('connection', function (socket) {
             throw err;
         });
     });
+
     // disconnect
     socket.on('disconnect', function () {
         let user;
