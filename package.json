@@ -1,0 +1,23 @@
+{
+  "name": "chat_app_example",
+  "version": "1.0.0",
+  "description": "Simple chat app with socets.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --inspect ./index.js",
+    "start": "node ./index.js"
+  },
+  "author": "Philipp Melnikov",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.2",
+    "mongoose": "^5.0.4",
+    "namor": "^1.0.1",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  }
+}
