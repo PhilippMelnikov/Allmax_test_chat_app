@@ -66,7 +66,7 @@ io.on('connection', function (socket) {
                 user: user.name,
                 text: res.text,
                 date: res.date
-            }
+            };
             io.emit('broadcast message', message);
         }).catch((err) => {
             throw err;
